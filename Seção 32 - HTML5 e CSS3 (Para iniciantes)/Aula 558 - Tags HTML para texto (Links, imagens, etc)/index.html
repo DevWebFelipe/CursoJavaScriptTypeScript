@@ -5,8 +5,112 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu HTML</title>
+  <style>
+    h2 {
+      background-color: antiquewhite;
+    }
+    .img_logo_mdn {
+      width: 200px;
+      height: 50px;
+    }
+    #code_oper {
+      background-color: bisque;
+    }
+    .red_style {
+      color: rgb(238, 64, 64);
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-  
+  <h1 style="background: wheat">Tags Inline para HTML</h1>
+  <h2><i>SubTítulo</i></h2>
+  <p>
+    <a href="https://developer.mozilla.org/pt-BR/" target="_blank">
+    <img class="img_logo_mdn" src="https://blog.mozilla.org/opendesign/files/2017/06/logo.png" 
+    alt="Logo da MDN">
+    </a>
+  </p>
+  <h3>
+    Parágrafo com tags de exemplo
+  </h3>
+  <p>
+    <span class="red_style">Lorem</span> (<code>console.log</code>) ipsum, <small>dolor</small> sit amet consectetur adipisicing elit. Totam asperiores, aliquid sit 
+    assumenda delectus labore deserunt nulla ducimus error soluta iusto explicabo, velit quia 
+    cum ipsa, consequatur adipisci itaque placeat! <br>
+    Não esquecer de consumir H<sub>2</sub>O com frequência. <br>
+  </p>
+  <p>
+  <q cite="https://developer.mozilla.org/pt-BR/">
+    Elevar números como 3<sup>3</sup>. Resultado seria 3 * 3 * 3 = 27.
+  </q>
+  </p>
+<pre> <!-- Texto com pré formatação -->
+<code id="code_oper">Sintaxe do código
+
+let soma = 0;
+insputsMais.forEach((input) => {
+  const valor = input.value;
+  const numero = Number(valor);
+  if (numero) {
+    soma += numero;
+  }
+  console.log(soma);
+})</code>
+</pre><hr>
+  <h3>
+    Parágrafo sem semântica
+  </h3>
+  <p>
+  <!-- STRONG tem o mesmo efeito de negrito que B, porém é semântico, ou seja,
+  indica uma entonação diferente -->
+    <span class="red_style">Lorem</span>, ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Eveniet nemo 
+    nihil, explicabo a modi commodi iusto rem <s>placeat</s> odio <u>quaerat</u> autem 
+    tempora error distinctio corporis. Praesentium, maxime. Ipsum, est 
+    <i>repellendus</i>.
+  <!-- EM tem o mesmo efeito itálico que I, porém, EM é semântico, ou seja,
+  indica que está dando ênfase naquela palavra ou frase -->
+  </p>
+  <h3>
+    Parágrafo semântico
+  </h3>
+  <p>
+  <!-- STRONG tem o mesmo efeito de negrito que B, porém é semântico, ou seja,
+  indica uma entonação diferente -->
+    <span class="red_style">Lorem</span>, ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Eveniet nemo 
+    nihil, explicabo a modi commodi iusto rem <del>placeat</del> odio <ins>quaerat</ins> autem 
+    tempora error distinctio corporis. Praesentium, maxime. Ipsum, est 
+    <em>repellendus</em>.
+  <!-- EM tem o mesmo efeito itálico que I, porém, EM é semântico, ou seja,
+  indica que está dando ênfase naquela palavra ou frase -->
+  </p><hr>
+  <blockquote cite="https://developer.mozilla.org/pt-BR/">
+    <p>
+      <span class="red_style">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Illo nemo non, repudiandae sint sunt, 
+      debitis molestiae quidem quibusdam doloribus ipsum deleniti aliquam, dolorum magni sed neque eum a 
+      pariatur. Quod.
+    </p><hr>
+    Abaixo, seguem alguns links com dados da aula 558
+  </blockquote>
+  <h3>
+    Links
+  </h3><hr>
+  <p>
+    O que é <a href="https://www.organicadigital.com/blog/o-que-e-web-semantica/#:~:text=Web%20Sem%C3%A2ntica%20%C3%A9%20um%20movimento,RDF%20(Resource%20Description%20Framework).">
+    semântica</a>? (abrindo na própria página)
+  </p>
+  <p>
+    O que é <a href="https://semantico.com.br/o-que-e-web-semantica/" target="_blank">
+    semântica</a>? (abrindo em nova página)
+  </p>
+  <p>
+    Como <a href="https://developers.google.com/search/docs/advanced/guidelines/qualify-outbound-links?hl=pt-br"
+    target="_blank">relacionar links</a> externos
+  </p>
+  <p>
+    Diferença entre <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong#bold_vs._strong"
+    target="_blank">Bold & Strong</a> externos
+  </p>
+  <div class="red_style">Bloco de texto com DIV</div>
 </body>
 </html>
