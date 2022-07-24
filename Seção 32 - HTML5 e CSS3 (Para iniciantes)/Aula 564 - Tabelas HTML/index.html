@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 800px;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: left;
+    }
+
+    table caption {
+      caption-side: bottom;
+      text-align: right;
+      font-style: italic;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    tfoot td,
+    table th {
+      background-color: #ddd;
+    }
+
+    tfoot td {
+      font-style: italic;
+    }
+
+    .responsive-table {
+      max-width: 100%;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </p>
+  <div class="responsive-table">
+    <table>
+      <caption>Uma descrição para essa tabela</caption>
+      <thead>
+        <tr>
+          <th>Título tabela 1</th>
+          <th>Título tabela 2</th>
+          <th>Título tabela 3</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Corpo 1</td>
+          <td>Corpo 2</td>
+          <td>Corpo 3</td>
+        </tr>
+        <tr>
+          <td colspan="2">Corpo 1</td>
+          <td rowspan="2">Corpo 3</td>
+        </tr>
+        <tr>
+          <td>Corpo 1</td>
+          <td>Corpo 2</td>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="2">Corpo 1</td>
+          <td>Corpo 3</td>
+        </tr>
+        <tr>
+          <td>Corpo 3</td>
+        </tr>
+
+      <tfoot>
+        <tr>
+          <td colspan="2" rowspan="2">Total 1</td>
+          <td>Total</td>
+        </tr>
+        <tr>
+          <td>R$ 4.000,00</td>
+        </tr>
+      </tfoot>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
