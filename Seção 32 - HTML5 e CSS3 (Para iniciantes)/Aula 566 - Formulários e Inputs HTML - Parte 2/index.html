@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    #lbl_pes_nome {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="get" target="_blank" autocomplete="off">
+    <h1>Campos para um formulário</h1>
+    <br>
+    <br>
+    <p>
+      <label>
+        Nome
+        <input type="text" id="pes_nome" name="pes_nome" placeholder="Nome pessoa" required />
+      </label>
+      <br>
+      <br>
+      <label for="pes_sobrenome" id="lbl_pes_nome">
+        Sobrenome
+      </label>
+      <input type="text" id="pes_sobrenome" name="pes_sobrenome" placeholder="Sobrenome pessoa" required />
+      <br>
+      <br>
+      <label>
+        <input type="checkbox" id="pes_desenvolvedor" name="pes_desenvolvedor" value="sim" checked />
+        Sou um desenvolvedor junior
+      </label>
+      <label>
+        <input type="checkbox" id="pes_desenvolvedor1" name="pes_desenvolvedor1" value="sim" checked />
+        Sou um desenvolvedor pleno
+      </label>
+      <label>
+        <input type="checkbox" id="pes_desenvolvedor2" name="pes_desenvolvedor2" value="sim" checked />
+        Sou um desenvolvedor senior
+      </label>
+      <br>
+      <br>
+    <fieldset style="width: 200px;">
+      <legend>Sexo</legend>
+      <p>
+        <label>
+          <input class="quebra_nova_linha" type="radio" name="sexo" id="pes_sexo" value="Feminino" />
+          Feminino
+        </label>
+        <br>
+        <label>
+          <input class="quebra_nova_linha" type="radio" name="sexo" id="pes_sexo" value="Masculino" checked/>
+          Masculino
+        </label>
+      </p>
+    </fieldset>
+    </p>
+
+    <p>
+      Gênero
+      <br>
+      <input type="radio" id="feminino" name="genero" value="feminino">
+      <label for="feminino">feminino</label>      
+      <br>
+      <input type="radio" id="masculino" name="genero" value="masculino" checked>
+      <label for="masculino">masculino</label>
+      <br>
+      <input type="radio" id="nao-declarado" name="genero" value="nao declarado">
+      <label for="nao-declarado">não declarado</label>
+    </p>
+
+    <p>
+      <button type="submit">Enviar</button>
+      <button type="reset">Cancelar</button>
+    </p>
+  </form>
+</body>
+
+</html>
