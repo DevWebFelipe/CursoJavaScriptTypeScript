@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    #lbl_pes_nome {
+      display: block;
+    }
+
+    .quebrar_linha {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="get" target="_blank" autocomplete="off">
+    <h1>Campos para um formulário</h1>
+    <br>
+    <p>
+      <label>
+        Data nascimento
+        <input class="quebrar_linha" type="date" id="pes_dnas" name="pes_dnas" value="2020-04-20" />
+      </label>
+      <br>
+      <label>
+        idade
+        <input class="quebrar_linha" type="number" id="pes_idade" name="pes_idade" placeholder="18" 
+          min="18" max="100" step="5"/>
+      </label>
+      <br>
+      <label>
+        Data e hora cadastro
+        <input class="quebrar_linha" type="datetime-local" id="pes_dcad" name="pes_dcad" 
+          value="2020-04-20T20:00" />
+      </label>
+      <br>
+      <label>
+        Hora da ultima alteração
+        <input class="quebrar_linha" type="time" id="pes_ult_alt" name="pes_ult_alt" value="20:00:01" />
+      </label>
+      <br>
+      <label>
+        Cor preferida
+        <input class="quebrar_linha" type="color" id="pes_cor" name="pes_cor" value="#003d66" />
+      </label>
+      <br>
+      <label>
+        E-mail
+        <input style="width: 250px;" class="quebrar_linha" type="email" id="pes_cor" name="pes_cor" 
+          placeholder="development.felipe@gmail.com" />
+      </label>
+      <br>
+      <label>
+        Foto
+        <input class="quebrar_linha" type="file" id="pes_cor" name="pes_cor" 
+          placeholder="development.felipe@gmail.com" accept=".png, .jpg, image/*" multiple />
+      </label>
+      <p>
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+      </p>
+  </form>
+</body>
+
+</html>
