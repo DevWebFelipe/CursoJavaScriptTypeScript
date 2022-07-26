@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    #lbl_pes_nome {
+      display: block;
+    }
+
+    .quebrar_linha {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="get" target="_blank" autocomplete="off">
+    <p>
+      <label>
+        Senha
+        <input class="quebrar_linha" type="password" id="pes_password" name="pes_password"
+          placeholder="Digite sua senha" />
+      </label>
+    </p>
+    <p>
+      <label>
+        URL
+        <input class="quebrar_linha" type="url" id="pes_url" name="pes_url" placeholder="Digite sua url" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Buscar
+        <input class="quebrar_linha" type="search" id="pes_search" name="pes_search" placeholder="Digite sua busca" />
+      </label>
+    </p>
+    <p>
+      <label for="pes_textarea">Área de texto</label>:</label>
+      <textarea name="pes_textarea" id="pes_textarea" rows="5" cols="15">É possível inserir um texto pré-definido
+      </textarea>
+    </p>
+    <p>
+      <label for="select">Selecione o tipo de lista:</label>
+      <select id="select" name="select">
+        <optgroup label="Formal">
+          <option valor="sintetica">Sintética</option>
+          <option valor="analitica" Label="Analítica" selected>
+        </optgroup>
+        <optgroup label="Desabilitado">
+          <option valor="nao definido" label="Não definido" disabled>
+        </optgroup>
+        <optgroup label="Informal">
+          <option valor="detalhada">Detalhada</option>
+          <option valor="resumida">Resumida</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label for="select">Selecione os tipos de lista:</label>
+      <select id="select" name="select" multiple>
+        <optgroup label="Formal">
+          <option valor="sintetica">Sintética</option>
+          <option valor="analitica" Label="Analítica" selected>
+        </optgroup>
+        <optgroup label="Desabilitado">
+          <option valor="nao definido" label="Não definido" disabled>
+        </optgroup>
+        <optgroup label="Informal">
+          <option valor="detalhada">Detalhada</option>
+          <option valor="resumida">Resumida</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label>
+        Senha
+        <input class="quebrar_linha" type="range" id="pes_range" name="pes_range" max="100" min="0" step="2"
+          list="options" />
+        <datalist id="options">
+          <option value="0" label="0%"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="40"></option>
+          <option value="50" label="50%"></option>
+          <option value="60"></option>
+          <option value="70"></option>
+          <option value="80"></option>
+          <option value="90"></option>
+          <option value="100" label="100%"></option>
+        </datalist>
+      </label>
+    </p>
+    <p>
+      <button type="submit">Enviar</button>
+      <button type="reset">Cancelar</button>
+    </p>
+  </form>
+</body>
+
+</html>
