@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pai h1+p {
+  color: red;
+}
+
+.pai p+h1 {
+  color: blue;
+}
+
+.pai h1~p {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.pai-div .um~.dois {
+  color: red;
+}
+
+.pai-div .dois~.um {
+  color: blue;
+}
+
+.pai-div .um+.dois {
+  color: blueviolet;
+}
+
+.pai-div .dois+.um {
+  color: cyan;
+}
+
+[meu-atributo="vermelho"] {
+  color: red
+}
+
+[meu-atributo="rosa"] {
+  color: darkmagenta
+}
+
+[checked] {
+  width: 50px;
+  height: 50px;
+}
