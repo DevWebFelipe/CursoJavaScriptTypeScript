@@ -1,0 +1,32 @@
+div {
+  color: initial;
+  margin-left: 20px;
+}
+
+.pai {
+  color: red;
+}
+
+.pai .filha {
+  color: blue;
+}
+
+.pai > .filha {
+  color: blueviolet;
+}
+
+.pai > .filha > .filha{
+  color: darkgoldenrod;
+}
+
+.pai > .filha > .class-separator > .filha{
+  color: rgb(212, 1, 202);
+}
+
+.pai .filha.segunda-filha {
+  color: palevioletred;
+}
+
+.class-separator {
+  color: black;
+}

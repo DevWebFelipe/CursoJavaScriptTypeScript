@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p, h2 {
+  color: green
+}
+
+body div section p, 
+body div section h2 {
+  color: red
+}
+
+.titulo {  
+  color: cornflowerblue
+}
+
+#titulo_principal {
+  color: blueviolet;
+}
