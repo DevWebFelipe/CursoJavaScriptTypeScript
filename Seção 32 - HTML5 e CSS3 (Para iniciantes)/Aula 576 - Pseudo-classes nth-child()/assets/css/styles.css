@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice ímpares*/
+ul li:nth-child(odd) {
+  background-color: goldenrod;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice par*/
+ul li:nth-child(even) {
+  background-color: rebeccapurple;
+  color: azure;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar o de índice 5*/
+ul li:nth-child(4) {
+  background-color: black;
+  color: white
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice múltiplos de 5*/
+ul li:nth-child(5n) {
+  background-color: aquamarine;
+  color: black;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar a partir do elemento 15 múltiplios de 3*/
+ul li:nth-child(3n+15) {
+  background-color: blue;
+  color: azure;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice ímpares*/
+p:nth-child(odd) {
+  background-color: goldenrod;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice par*/
+p:nth-child(even) {
+  background-color: rebeccapurple;
+  color: azure;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar o de índice 5*/
+p:nth-child(4) {
+  background-color: black;
+  color: white
+}
+
+/*em um grupo de elementos irmãos, quero selecionar os de índice múltiplos de 5*/
+p:nth-child(5n) {
+  background-color: aquamarine;
+  color: black;
+}
+
+/*em um grupo de elementos irmãos, quero selecionar a partir do elemento 15 múltiplios de 3*/
+p:nth-child(3n+15) {
+  background-color: blue;
+  color: azure;
+}
