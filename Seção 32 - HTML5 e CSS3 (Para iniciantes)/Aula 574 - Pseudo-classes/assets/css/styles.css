@@ -1,0 +1,89 @@
+.heading {
+  transition: all 0.5s ease-in-out;
+}
+
+.heading:hover {
+  background-color: rgb(241, 206, 171);
+  font-style: italic;
+}
+
+a {
+  background-color: rgb(247, 245, 243);
+  color: darkgreen;
+}
+
+/*link nunca visitado por essa pagina*/
+a:link {
+  color: red
+}
+
+/*link já visitado por essa pagina*/
+a:visited {
+  color: blue;
+}
+
+/*quando passa o mouse por cima*/
+a:hover {
+  background-color: darkslateblue;
+  color: white;
+  text-decoration: none;
+}
+
+/*quando o elemento está clicado*/
+a:active {
+  background-color: darkslategrey;
+  color: white;
+  text-decoration: none;
+}
+
+/*se o componente estiver focado*/
+.edt_teste:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: 1px solid black;
+}
+
+/*se o componente estiver desabilitado*/
+.edt_teste_desabilitado:disabled {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  background-color: cadetblue;
+  cursor: not-allowed;
+  border: 1px solid black;
+}
+
+/*se o componente estiver habilitado*/
+input:enabled {
+  background-color: antiquewhite;
+}
+
+/*quando for um checkbox e ele estiver marcado*/
+input:checked {
+  width: 20px;
+  height: 20px;
+}
+
+/*pra mudar um elemento com base no estado de outro elemento, nesse caso
+mudando o elemento P que vir na sequência, o + quer dizer que é para mudar
+o primeiro elemento desse tipo que vier na sequencia */
+input:checked + p {
+  width: 80px;
+  height: 20px;
+  background-color: bisque;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*aplica ao primeiro registro*/
+.pai .lista li:first-child {
+  background-color: red;
+}
+
+/*aplica ao ultimo registro*/
+.pai .lista li:last-child {
+  background-color: red;
+}
+
+/*se for um componente que é exigido que receba algum valor*/
+input:required {
+  background-color: aqua;
+}
