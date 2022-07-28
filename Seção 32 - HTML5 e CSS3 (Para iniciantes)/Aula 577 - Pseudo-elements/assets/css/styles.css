@@ -1,0 +1,51 @@
+/*caso eu queira colocar algo depois do conteúdo de um elemento*/
+ul li::after {
+  content: ' - ';
+  background-color: aquamarine;
+  color: red;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*caso eu queira colocar algo antes do conteúdo de um elemento*/
+ul li::before {
+  content: ' - ';
+  background-color: aquamarine;
+  color: red;
+  margin: 5px;
+  padding: 5px;
+}
+
+p {
+  font-size: 24px;
+}
+
+/*primeira letra do conteúdo de um elemento*/
+p::first-letter {
+  font-size: 80px;
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/*primeira linha do conteúdo de um elemento*/
+p::first-line {
+  font-style: italic;
+}
+
+/*primeira linha do conteúdo de um elemento*/
+p::first-line {
+  font-style: italic;
+  background-color: antiquewhite;
+}
+
+p::selection {
+  background-color: black;
+  color: antiquewhite;
+}
+
+.form-field::placeholder {
+  color: red;
+  font-size: larger;
+  background-color: azure;
+}
