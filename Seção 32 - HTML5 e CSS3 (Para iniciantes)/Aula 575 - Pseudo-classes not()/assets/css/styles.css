@@ -1,0 +1,16 @@
+/*aplica em todos os p que não tiverem a classe .p-do-meio*/
+p:not(.p-do-meio) {
+  color: blue;
+}
+
+/*quando o input não estiver marcado e tiver um p logo depois dele,
+esse p vai ficar com o estilo*/
+input:not(:checked) + p{
+  background-color: antiquewhite;
+}
+
+/*quando o input estiver marcado e tiver um p logo depois dele,
+esse p vai ficar com o estilo*/
+input:checked + p{
+  background-color: aquamarine;
+}
