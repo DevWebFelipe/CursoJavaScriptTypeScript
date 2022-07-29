@@ -1,0 +1,11 @@
+/*Tudo que tiver dentro dessa seletor, vai herdar seus stilos*/
+#texto {
+  color: red;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+/*desativar a herança para aplicar o estilo inicial do elemento*/
+.sem-heranca {
+  font-size: initial;
+}
