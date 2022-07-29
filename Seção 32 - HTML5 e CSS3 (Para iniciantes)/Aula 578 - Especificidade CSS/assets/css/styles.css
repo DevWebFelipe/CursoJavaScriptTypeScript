@@ -1,0 +1,90 @@
+/*
+
+R=Hierarquia gerao --> (Important > style > empate > especificidade)
+
+OBS: A tag style direto no elemento no HTML sobrepõe qualquer especificidade
+porém, não se usa, então da pra desconsiderar a primeira coluna do cálculo,
+basta saber que da pra fazer
+
+(style) (ID) (Class, atributos e pseudo-classes) (Elementos e pseudo-elementos)
+
+Cálculo do Grau de especificidade/hierarquia
+
+(0) (2) (1) (1) - 01º caso 
+(0) (2) (0) (0) - 02º caso
+(0) (1) (1) (2) - 03º caso
+(0) (1) (1) (1) - 04º caso
+(0) (1) (1) (0) - 05º caso
+(0) (1) (0) (1) - 06º caso
+(0) (1) (0) (0) - 07º caso 
+(0) (0) (1) (0) - 08º caso
+(0) (0) (0) (1) - 09º caso 
+(0) (2) (2) (2) - 10º caso
+
+Exceções:
+!important -> Sobrepõe qualquer especificidade, deve ser colocado a frente 
+  do stilo desejado, em caso de dois stilos com !important vai dar empate na
+  especificidade, nesse caso, o valor do cálculo da especificidade que vai 
+  desempatar, se ainda assim persistir, será desempatado pela regra que vier
+  por último
+*/
+
+body#corpo.corpo-principal p#p_1.paragrafo {
+  background-color: aqua;
+  color: black;
+}
+
+/*grau de especificidade é (2, 2, 2)*/
+body#corpo.corpo-principal p#p_1.paragrafo {
+  background-color: yellow;
+  color: black;
+}
+
+/*grau de especificidade é (2, 1, 1)*/
+#corpo p#p_1.paragrafo {
+  background-color: purple;
+  color: aliceblue;
+}
+
+/*grau de especificidade é (2, 0, 0)*/
+#corpo #p_1 {
+  background-color: rgb(255, 0, 212) !important;
+  color: black;
+}
+
+/*grau de especificidade é (1, 1, 2)*/
+body p#p_1.paragrafo {
+  background-color: black;
+  color: aliceblue;
+}
+
+/*grau de especificidade é (1, 1, 1)*/
+p#p_1.paragrafo {
+  background-color: darkgoldenrod;
+}
+
+/*grau de especificidade é (1, 1, 0)*/
+#p_1.paragrafo {
+  background-color: rgb(100, 100, 26);
+}
+
+/*grau de especificidade é (1, 0, 1)*/
+p#p_1 {
+  background-color: pink;
+}
+
+/*grau de especificidade é (1, 0, 0)*/
+#p_1 {
+  background-color: red;
+}
+
+/*grau de especificidade é (0, 1, 0)*/
+.paragrafo {
+  background-color: blue;
+}
+
+p {
+  background-color: aqua;
+  color: black;
+}
+
