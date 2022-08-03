@@ -1,0 +1,40 @@
+.text-one {
+  /*desta forma, determina que o conteúdo vai seguir os estilos abaixo,
+  também indica que o PADDING BORDER e MARGIM serão somados ao tamanho do 
+  conteúdo*/
+  box-sizing: content-box;
+
+  /*PADDING agora acrescenta pra dentro, MARGIN e BORDER acrescenta pra fora*/
+  box-sizing: padding-box;
+
+  /*PADDING, BORDER exceto MARGIN(margin sempre vai ser pra fora do conteúdo)
+  contam o tamanho junto com o conteúdo, normalmente é
+  o mais utilizado, porque assim, sempre que colocado um tamanho nos estilos, vai
+  ser aplicado aquele tamanho realmente*/
+  box-sizing: border-box;
+
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 200px;
+  min-width: 0;
+  min-height: 250px;
+  overflow: auto;
+
+  /*dessa maneira, vai alinhar a div sempre ao centro da tela*/
+  margin: 0 auto;
+
+  /*em cima sem margem
+    a direita margem automática
+    em baixo margem de 50 pixels
+    a esquerda margem automática*/
+  margin: 0 auto 50px auto;
+
+  /*serve para preencher as bordas, acresentando os pixels ao tamanho
+  do conteúdo*/
+  padding: 15px;
+
+  /*acrescenta uma moldura/borda, também acrescenta ao tamanho do conteúdo*/
+  border: 5px double black;
+}

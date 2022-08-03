@@ -1,0 +1,24 @@
+.text-one {
+  /*display BLOCK ocupa o espaço de fora a fora e joga o resto pra baixo, 
+  independente de ter espaço sobrando ou não*/
+  display: block;
+  background-color: antiquewhite;
+  width: 200px;
+  height: 200px;
+  /*todo o conteúdo que passar do tamanho da div vai ficar escondido dentro 
+  dela própria, sem sobrepor as divs sequentes*/
+  overflow: hidden;
+  /*todo o conteúdo do eixo X - Horizontal e Y - Vertical, recebe um scrool mesmo
+  que não ultrapasse os limites da div*/
+  overflow-y: scroll;
+    /*todo o conteúdo do eixo X - Horizontal e Y - Vertical, recebe um scrool quando 
+  ultrapassar os limites*/
+  overflow-y: auto;
+}
+
+.text-two {
+  /*display INLINE não pega alguns estilos, como tamanho, cor entre outros*/
+  display: inline;
+  background-color: aquamarine;
+  width: 50%;
+}
