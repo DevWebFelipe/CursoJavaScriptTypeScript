@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  box-sizing: border-box;
+  /*padding: 15px;*/
+  padding: 15px;
+}
+
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid .col {
+  /*pega o espaço das propriedades, coloca a próxima div ao lado, 
+  mesmo que não tenha margin, caso tenha espaços na escrita do HTML entre uma div e outra,
+  pode pegar esses espaços e jogar para a tela, tem que ficar ligado, não se usa muito*/
+
+  /*display: inline-block;*/
+
+  /*pega o espaço horizontal inteiro, mesmo que não ocupe-o*/
+
+  /*display: block;*/
+  
+  /*assim o padding desconta pra dentro, ao invés de somar no tamanho do conteudo*/
+  box-sizing: border-box;
+  width: 33.33%;
+  height: 300px;
+  float: left;
+  padding: 15px;
+}
+
+.grid .col-content {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.text {
+  /*limpa qualquer coisa de CSS que estiver a esquerda desse elemento BOTH limpa a esquerda e direita*/
+  
+  /*clear: left;*/
+  clear: both;
+}
