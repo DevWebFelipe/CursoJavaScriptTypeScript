@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Por padrão o navegador vai ter fonte de 16px, então, podemos usar o seguinte cálculo
+a font-size vai ser de 62,5% da fonte do navegador, de modo que vai ter exatamente o 
+tamanho de 10px, tendo em vista que 10px equivale a 62,5% de 16px,
+dessa forma, ao usar o REM como unidade de medida, 1 significa que é 10px,
+1.6rem significa que é 16px*/
+
+/*essa medida do rem pode ser usada de modo geral, não apenas para a fonte de modo que somente 
+tenho que ter em mente que preciso sempre multiplicar por 10 o tamanho que eu quero, 
+no caso se eu quero que tenha 300 tenho que colocar o tamanho de 30rem que no caso vai ser 
+multiplicado por 10  que é o tamanho que eu estipulei no html*/
+
+/*o uso das unidades de medida relativas, se aplica ao uso que o usuario pode fazer quanto
+ao tamanho padrao do navegador, e tamanho de fonte por exemplo*/
+
+.testar-unidade-medida {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(192, 197, 197, 0.2);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.unidades {
+  margin: 30px;
+}
+
+.relativas, .absolutas {
+  border: 5px solid black;
+  margin: 10px;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+
+.titulo {
+  margin: 20px 0 0 40px;
+}
+
+.lista-unidades {
+  margin: 10px 0 0 40px;
+}
+
+.resumo {
+  margin: 30px 0 0 20px;
+}
+
+.relativas .titulo {
+  margin: 20px 0 0 55px;
+}
+
+.link-unidades {
+  text-align: center;  
+  height: 40px;
+  width: 100%;
+  background-color: bisque;
+  padding: 20px 0 20px 0;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  font-style: italic;
+}
+
+.lista-item {
+  margin-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.fundo-pagina {
+  font-size: 1.6rem;
+  min-width: 450px;
+}
