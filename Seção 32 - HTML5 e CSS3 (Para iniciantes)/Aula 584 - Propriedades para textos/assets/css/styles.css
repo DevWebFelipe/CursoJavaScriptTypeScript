@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.paragrafo-texto {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold; /*negrito*/
+  direction: ltr; /*direção do texto LTR esquerda -> direita RTL direita -> esquerda*/
+  letter-spacing: 2px; /*espaçamento entre letras*/
+  word-spacing: 5px; /*espaçamento entre palavras*/
+  line-height: 25px; /*espaçamento entre as linhas*/
+  text-align: center; /*alinhamento do texto*/
+  text-decoration: underline; /*decoração de texto - LINE-THROUGH risca a palavra*/
+}
+
+.promocao {
+  margin-top: 20px;
+  background-color: greenyellow;
+  padding: 40px;
+}
+
+.valor-de {
+  font-size: 25px;
+  text-decoration: underline overline;
+  text-transform: uppercase;
+}
+
+.valor-inicial {
+  font-size: 25px;
+  margin-left: 60px;
+  text-decoration: line-through; /*risca a palavra*/
+  text-shadow: 2px 2px 2px red; /*coloca sombra no texto e borra ela*/
+               /*1º tamanho da sombra da esquerda para direita (valor negativo inverte a direção)
+                 2º tamanho da sombra de cima para baixo (valor negativo inverte a direção)
+                 3º força do borrão da sombra, se 0, então não borra*/
+}
+.valor-por {
+  margin-top: 25px;
+  font-size: 40px;
+  text-decoration: underline overline; /*coloca uma linha acima e uma abaixo*/
+  text-transform: uppercase; /*muda a fonte, maiúsculo, minúsculo 
+  (CAPITALIZE pega a primeira  letra de cada palavra como maiúscula, o restante
+  minúscula)*/
+}
+
+.valor-final {
+  font-size: 40px;
+  margin-left: 60px; 
+  text-shadow: -2px 2px 2px rgb(6, 160, 199); /*coloca sombra no texto*/
+}
+
+.paragrafos {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 25px 10px 0 10px;
+  padding: 15px;
+}
+
+.paragrafos p {
+  text-indent: 15px; /*identa os parágrafos*/
+  color: antiquewhite;
+}
