@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-itens {
+  text-decoration: none;
+  color: bisque;
+  height: 100%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  font-size: 25px;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+}
+
+.menu-itens:hover {
+  background-color: rgba(235, 224, 224, 0.9);
+  color: rgba(12, 10, 10, 0.911);
+  font-style: italic;
+}
+
+#pagina1, #pagina2, #pagina3, #pagina4, #pagina5 {
+  width: 100vw;
+  height: 100vh;
+}
+
+#pagina1 {
+  background-color: rgba(80, 218, 137, 0.6);
+}
+
+#pagina2 {
+  background-color: rgba(37, 168, 185, 0.6);
+}
+
+#pagina3 {
+  background-color: rgba(34, 52, 153, 0.6);
+}
+
+#pagina4 {
+  background-color: rgba(171, 201, 40, 0.6);
+}
+
+#pagina5 {
+  background-color: rgba(223, 113, 39, 0.6);
+}
+
+h1 {
+  padding: 70px 0 20px 0;    
+  text-align: center;
+}
+
+p {
+  margin-left: 100px;
+  margin-right: 100px;
+}
