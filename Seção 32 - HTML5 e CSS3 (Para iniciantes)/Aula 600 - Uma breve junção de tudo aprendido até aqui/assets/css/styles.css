@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.grid {
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 73px;
+}
+
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid .col {
+  box-sizing: border-box;
+  width: 33.33%;
+  height: 300px;
+  float: left;
+  padding: 30px;
+}
+
+.grid .col-content {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.text {
+  clear: both;
+}
+
+.menu {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+
+.menu ul {
+  list-style: none;
+  display: block;
+  padding: 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;  
+}
+
+.menu ul li {
+  float: left;
+}
+
+.menu ul li a {
+  display: block;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  /*se inspecionar isso, da pra ver um desenho de como vai ser feito a transicao
+  também pode-se alterar o efeito, de modo que é só copiar o resultado e colocar
+  a frente do tempo de efeito*/
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+  background-color: rgba(51, 51, 51, 0.877);
+}
+
+.full-page {
+  max-width: 100%;
+  padding-top: 73px;
+  height: 100vh;
+  background-color: turquoise;
+}
+
+.full-page-content {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1200px;
+  
+}
+
+@media (max-width: 320px) {
+
+  .grid .col {
+    width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 500px) {
+
+  .grid .col {
+    width: 50%;
+  }
+}
