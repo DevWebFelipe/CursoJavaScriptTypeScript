@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid .col {
+  box-sizing: border-box;
+  width: 33.33%;
+  height: 300px;
+  float: left;
+  padding: 15px;
+}
+
+.grid .col-content {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.text {
+  clear: both;
+}
+
+/*é usado para sobrescrever estruturas, por exemplo, montei o site todo para desktop
+uso um @media para sobrescrever o CSS quando a tela for de um tamanho diferente,
+no exemplo abaixo, se a tela for menor que 320px, vai mostrar uma coluna, se for 
+maior que 321px e menor que 500px vai mostrar 2 colunas, sendo maior que 
+500px vai seguir o CSS principal que havia sido escrito
+
+Isso pode ser montado com 
+
+AND -> que condiciona mais de uma validação
+OR -> mesma coisa que AND, mas atende uma ou outra coisa
+ONLY -> quer dizer que somente se condição atendi, exemplo, quero aplicar
+somente se for uma TV, ou somente se for uma impressora etc
+ALL -> será aplicado em todos os dispositivos*/
+@media (max-width: 320px) {
+
+  .grid .col {
+    width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 500px) {
+
+  .grid .col {
+    width: 50%;
+  }
+}
