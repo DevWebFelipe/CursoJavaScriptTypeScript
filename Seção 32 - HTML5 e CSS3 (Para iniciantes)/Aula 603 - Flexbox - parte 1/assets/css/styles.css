@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+
+  /*ROW - eixo principal na horizontal (esquerda > direita)*/
+  /*ROW-REVERSE - eixo principal na horizontal (direita > esquerda)*/
+  /*COLLUMN - eixo principal na vertical (cima > baixo)*/
+  /*COLLUMN-REVERSE - eixo principal na vertical (baixo > cima)*/
+  flex-direction: column;
+
+  /*eixo perpendicular*/
+  align-items: center;
+  /*STRETCH - Os elementos se esticam para ocupar toda a esteção do container*/
+  /*FLEX-START - Os elementos se alinham no começo do eixo principal*/
+  /*FLEX-END - Os elementos se alinham no final do eixo principal*/
+  /*CENTER - Os elementos se alinham no centro do eixo principal*/
+  /*SPACE-AROUND - Os elementos se alinham com intervalos de espaço iguais
+  (com espaço nas bordas, espaço entre dois elementos são somados)*/
+  /*SPACE-EVENLY - Os elementos se alinham com intervalos de espaço iguais
+  (com espaço nas bordas, espaço entre dois elementos são compartilhados)*/
+  /*SPACE-BETWEEN - Os elementos se alinham com intervamos de espaço iguais
+  (sem espaço nas bordas)*/
+  /*BASELINE - Os elmentos alinhance pela base do conteúdo de seus elementos*/
+
+  /*eixo principal*/
+  justify-content: center;
+  /*FLEX-START - Os elementos se alinham no começo do eixo principal*/
+  /*FLEX-END - Os elementos se alinham no final do eixo principal*/
+  /*CENTER - Os elementos se alinham no centro do eixo principal*/
+  /*SPACE-AROUND - Os elementos se alinham com intervalos de espaço iguais
+  (com espaço nas bordas, espaço entre dois elementos são somados)*/
+  /*SPACE-EVENLY - Os elementos se alinham com intervalos de espaço iguais
+  (com espaço nas bordas, espaço entre dois elementos são compartilhados)*/
+  /*SPACE-BETWEEN - Os elementos se alinham com intervamos de espaço iguais
+  (sem espaço nas bordas)*/
+
+  background-color: yellow;
+  height: 500px;
+
+  /*GAP - não funciona em todos os navegadores, tem que ver isso quando for
+  usar, basicamente, ele coloca um espaço entre os elementos contidos no
+  flex-container*/
+  gap: 30px;
+}
+
+.flex-item {
+  background-color: red;
+  margin: 10px;
+}
+
+.flex-item:nth-child(3) {
+  font-size: 40px;
+}
