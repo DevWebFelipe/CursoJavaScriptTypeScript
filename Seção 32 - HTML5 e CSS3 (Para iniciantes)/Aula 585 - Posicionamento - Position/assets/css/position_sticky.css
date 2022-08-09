@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+}
+
+ul {
+  height: 300px;
+  overflow-y: auto;
+}
+
+ul li.sticky {
+  /*nesse exemplo, vai ficar fixado ao topo até encontrar outro elemento de mesma classe
+  quando encontrar, esse outro que vai ficar fixado ao topo, e assim por diante*/
+  position: sticky;
+  background-color: gray;
+  top: 0;
+}

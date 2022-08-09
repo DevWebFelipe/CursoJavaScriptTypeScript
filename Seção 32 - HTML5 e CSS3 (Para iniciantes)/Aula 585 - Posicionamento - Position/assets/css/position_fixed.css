@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+}
+
+.pai {
+  height: 300vh;
+}
+
+.filha1, .filha2, .filha3 {
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  background-color: rgba(255, 0, 0, 0.5);
+  position: static;
+}
+
+.filha2 {
+  background-color: greenyellow;
+  /*esse elemento vai ficar fixado aqui, mesmo que role a página ou independente de qualquer 
+  coisa, ele sempre vai ficar fixo onde for colocado*/
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 1;
+}
+
+.filha3 {
+  background-color: green;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}

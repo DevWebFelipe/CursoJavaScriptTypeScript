@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+}
+
+.pai {
+  height: 300vh;
+}
+
+.filha1, .filha2 {
+  width: 300px;
+  height: 500px;
+  margin: 10px;
+  background-color: rgba(255, 0, 0, 0.5);
+  position: static;
+}
+
+.filha2 {
+  position: absolute;
+  background-color: greenyellow;
+  /*se eu negativar o z-index, ele vai para o fundo, atrás de todos os outros
+  elementos da tela*/
+  z-index: -1;
+}
+
+.filha1 {
+  /*Os elementos começam a se comportar de maneira relativa
+  ao que eu impor nas propriedades, seu posicionamento irá alterar,
+  e será como se o elemento não existisse ali, ou seja, seu local original
+  na tela, não fosse ocupado por nada, ficando por baixo desse elemento
+  absolute*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*nesse caso, acima eu centralizei o filha1 ao centro da página, mas 
+  o que centraliza é a quina, então o tamanho dela em si, não fica centralizado
+  com isso pode-se usar um artifício que seria usar uma margin negativa, de
+  modo que ela tire o espaço sobressalente, assim, o tamanho todo do elemento vai ficar
+  centralizado ao meio da página, em qualquer que seja a direção*/
+  margin-top: -150px;
+  margin-left: -150px;
+  /*Cria camadas, onde o z-index de maior valor vai ficar por cima
+  dos demais elementos da página*/
+  z-index: 2;
+}
