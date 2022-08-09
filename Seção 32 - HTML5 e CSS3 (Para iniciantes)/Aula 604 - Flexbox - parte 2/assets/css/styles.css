@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  /*alinha os itens*/
+  align-items: flex-start;
+  /*alinha todo o conteúdo*/
+  align-content: center;
+  /*Dessa forma, se não tiver espaço para ocupar a linha inteira
+  ele vai quebrar a linha*/
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: yellow;
+  height: 800px;
+  width: 100%;
+}
+
+.flex-item {
+  width: 33.3%;
+  background-color: red;
+  color: aliceblue;
+}
