@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  /*flex-flow é atalho para a direção dos eixos e para quebrar no tamanho máximo*/
+  flex-flow: row wrap;
+  background-color: yellow;
+}
+
+.flex-item {
+  /*Pega o espaço e aumenta os elementos até ocupar todo o tamanho do container*/
+  flex-grow: 1;
+  /*Reserva um espaço mínimo para cada elemento, depois disso, o flex-grow pode 
+  distribuir o tamanho restante*/
+  flex-basis: 320px;
+  /*0 - Não vai permitir que o tamanho fique abaixo do flex-basis*/
+  /*1 - Permite que o tamanho do elemento fique abaixo do flex-basis*/
+  flex-shrink: 0;
+  /*para tudo que foi visto acima, pode-se apenas usar o atalho*/
+  /*flex-grow flex-shrink flex-basis*/
+  flex: 1 0 320px;
+
+  height: 200px;
+  margin: 2px;
+  background-color: red;
+  /*margin: 10px;*/
+  color: aliceblue;
+}
+
+/*esse seletor pega o segundo elemento de mesma classe*/
+.flex-item:nth-child(2) {
+  /*aqui estamos falando de proporção, então no seguinte exemplo, o elemento precisa de 
+  320px, o restante é dividido igualmente, então se tenho 660px, vai caber dois elementos
+  de 320px e vai sobrar 20px esses 20px serão distribuídos igualmente entre os dois 
+  elementos, então cada um ficará com 330px, porém, como eu disse que o segundo elemento 
+  vai receber a proporção de 5, e os demais a proporção de 1 que está no flex-item, então
+  o elemento 2 vai receber 5x mais espaço do que os demais*/
+  flex: 5 0 320px;
+  background-color: blueviolet;
+}

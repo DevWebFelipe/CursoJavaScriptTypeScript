@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  /*FLEX - Em relação a outros elementos se comporta como se fosse block*/
+  /*INLINE-FLEX - Em relação a outros elementos se comporta como inline
+  ou seja, permite que ao seu lado, venham outros elementos*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellow;
+  height: 500px;
+}
+
+.flex-item {
+  width: 100%;
+  background-color: red;
+  margin: 10px;
+  color: aliceblue;
+}
