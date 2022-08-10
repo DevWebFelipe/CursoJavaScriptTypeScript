@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+}
+
+.two-columns {
+  display: flex;
+}
+
+.two-columns .col {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  margin: 15px;
+  padding: 15px;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+.gallery {
+  flex-flow: row wrap;  
+  display: flex;
+  background-color: rgba(29, 66, 230, 0.788);
+}
+
+.gallery .img {
+  margin: 10px;
+  flex: 1 0 20%;
+  height: 50px;
+  background-color: rgba(2, 2, 15, 0.712);
+}
