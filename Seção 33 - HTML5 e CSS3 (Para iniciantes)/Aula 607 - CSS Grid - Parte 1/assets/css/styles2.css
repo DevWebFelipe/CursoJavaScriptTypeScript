@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: sans-serif;
+  font-size: 40;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  /*com a função minmax eu defino um tamanho mínuimo e um tamanho máximo, de modo
+  que a partir desse momento, a minha grid irá se adequar automaticamente ao tamanho
+  do dispositivo, para isso, o meu repeat tem que ser auto-fill também, que seria 
+  definir que cria quantas colunas couber*/
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+
+.grid div {
+  background-color: tomato;
+  min-height: 50px;
+}
+
+.grid div:nth-child(8) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .grid div:nth-child(8) {
+    grid-column: span 1;
+  }
+}
