@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: sans-serif;
+  font-size: 40;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /*tudo que passar a direita ou esquerda do elemento pai, ficará oculto*/
+  overflow-x: hidden;
+}
+
+.grid {
+  /*nem todos os navegadores suportam o GAP, então, foi mostrado uma forma 
+  alternativa com calc, só que conferindo no MDN Can I Use, vimos que também
+  não é todos que aceitam o calc, dessa forma, da de fazer uma margin a direita
+  negativa, assim, a sobra da margim ficaria oculta*/
+  /*width: calc(100% + 30px);*/
+  margin-right: -30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /*normalmente se usa o GAP, aqui nessa aula, só foi quisto mostrar que caso não
+  se possa usar uma determinada propriedade por conta de uma incompatibilidade
+  pode-se contornar, tecnologias mais antigas são mais complexas, porém, abrangem 
+  mais os navegadores e suas versões*/
+  /*GAP - Espaço geral, exceto bordas*/
+  /*ROW-GAP - Espaço entre linhas*/
+  /*COLUMN-GAP - Espaço entre colunas*/
+}
+
+.grid div {
+  background-color: brown;
+  height: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.grid div:nth-child(5) {
+  background-color: aquamarine;
+}
