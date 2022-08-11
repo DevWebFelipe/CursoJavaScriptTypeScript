@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: sans-serif;
+  font-size: 40;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  /*da pra nomear as colunas, lemrando que ela conta do início ao fim, 
+  então se tenho 3 colunas na tela, vai ter quatro na div, porque a 4ª 
+  coluna que vai fechar a minha grid*/
+  grid-template-columns: 
+  [um] 1fr 
+  [dois] 1fr 
+  [tres] 1fr 
+  [quatro];
+  gap: 10px;
+}
+
+.grid div {
+  background-color: tomato;
+  min-height: 50px;
+}
+
+.grid div:nth-child(8) {
+  background-color: aquamarine;
+  /*o nome dado acima, pode ser usado agora para definir configurações*/
+  grid-column-start: um;
+  grid-column-end: quatro;
+  /*pode usar um atalho nesse caso também, onde ao invés de definir
+  star e end, posso só chamar o grid-column e dizer onde começa e onde
+  termina separando com uma barra/, essa barra é da sitaxe, tem que ter
+  para separar os nomes das colunas, o mesmo atalho pode ser usado sem passar
+  nomes, basta passar a posição da coluna*/
+  grid-column: dois/quatro;
+  /*no exemplo abaixo, estou dizendo que a coluna vai se expandir para duas
+  colunas, e que deve terminar na coluna 3*/
+  grid-column: span 2/3;
+  grid-row: 2/4;
+  /*pode também usar um atalho para tudo isso, nesse caso temos o seguinte
+  começa na linha 1 e termina na coluna 3, inicia na linha 4 e termina na coluna 3
+  nesse caso, estamos definindo as quatro pontas do elemento*/
+  grid-area: 1/1 /4/3
+}

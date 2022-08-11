@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: sans-serif;
+  font-size: 40;
+}
+
+.grid {
+  /*com margim 0 auto, e um tamanho máximo definido, estou dizendo que 
+  meu elemento sempre será alinhado ao centro da tela do computador*/  
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  /*Desta maneira, a primeira coluna vai ter 200pixels, 
+  o restante do espaço na tela vai ser dividio em fragmentos
+  de modo que posso determinar quantos fragmentos cada coluna irá ocupar
+  no exemplo abaixo, temos 3 fragmentos, porque eu disse que a segunda
+  coluna terá um e a terceira terá dois, então o espaço em branco será divido
+  em tres onde dois dos tres será definido para a colua tres*/
+  grid-template-columns: 200px 1fr 2fr;
+
+  /*Desta maneira, estou dizendo que a minha grid será dividida em tres colunas
+  onde cada coluna terá o tamanho de 1 fr(fragmento) então ao redimensionar,
+  minha grid sempre terá 3 colunas de tamanhos iguais*/
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /*Caso queira criar diversas colunas, para não precisar definir uma por uma, pode-se
+  usar a função repeat, no caso abaixo, estou dizendo que quero repetir 3x as colunas
+  1 e 2 com 1 e 2 fragmentos respectivamente, mas eu poderia passar só uma dimenção
+  e iria repetir somente aquela dimensão*/
+  grid-template-columns: repeat(3, 1fr 2fr);
+  grid-template-columns: repeat(3, 1fr);
+
+  /*toda linha para a qual não é definido um tamanho, assume 1fr de tamanho,
+  em tese, tudo que foi feito para colunas, pode ser feito para linhas também*/
+  grid-template-rows: 1fr;
+
+  /*Serve para criar um espaçamento, uma espécie de margim na grid*/
+  gap: 10px;
+}
+
+.grid div {
+  background-color: tomato;
+  min-height: 50px;  
+}
+
+.grid div:nth-child(5) {
+  /*posso dizer que um elemento em uma linha e uma coluna específicas, vai
+  ter um tamanho diferente, ele pode ocupar duas linhas, ou duas colunas por
+  exemplo*/
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  background-color: blue;
+}
+
+.grid div:nth-child(10),
+.grid div:nth-child(9) {
+  /*posso dizer que um elemento em uma linha e uma coluna específicas, vai
+  ter um tamanho diferente, ele pode ocupar duas linhas, ou duas colunas por
+  exemplo*/
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: blue;
+}
+
+/*o SPAN, vai fazer o elemento se espandir para duas linhas*/
+.grid div:nth-child(13) {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: yellow;
+}
+
+/*não sei o porque, mas se quiser, pode sobrepor uma coluna ou linha também*/
+/*dessa forma, ambos estão sobrepostos, não da pra ver, mas está os dois ali
+da pra alterar qual fica por cima alterando o z-index*/
+.grid div:nth-child(15) {
+  grid-column-start: 3;
+  grid-row-start: 6; 
+  background-color: aqua;
+  z-index: 1;
+}
+
+.grid div:nth-child(18) {
+  grid-column-start: 3;  
+  grid-row-start: 6; 
+  background-color: yellow;
+}
