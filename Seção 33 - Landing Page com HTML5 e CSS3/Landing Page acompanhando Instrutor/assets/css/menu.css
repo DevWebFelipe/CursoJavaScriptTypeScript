@@ -5,6 +5,7 @@
   right: 0;
   width: 100%;
   border-bottom: var(--light-gray-color) solid 0.1rem;
+  z-index: 1;
 }
 
 .menu h1 {
@@ -29,14 +30,6 @@
   color: inherit;
 }
 
-.menu-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
 .menu ul li a::after {
   content: '';
   position: absolute;
@@ -51,4 +44,16 @@
 .menu ul li a:hover::after {
   width: 50%;
   left: 25%;
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.menu-spacing {
+  height: 6.5rem;
 }
