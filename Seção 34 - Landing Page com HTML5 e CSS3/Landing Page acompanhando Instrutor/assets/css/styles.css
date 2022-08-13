@@ -18,7 +18,8 @@
   height: auto;
 }
 
-.top3-content {
+.top3-content,
+.pricing-content {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
