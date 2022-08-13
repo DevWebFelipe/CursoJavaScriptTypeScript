@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/elements.css">
   <link rel="stylesheet" href="assets/css/global-classes.css">
   <link rel="stylesheet" href="assets/css/intro.css">
+  <link rel="stylesheet" href="assets/css/top-jobs.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/menu.css">
 </head>
@@ -28,10 +29,10 @@
       <nav>
         <ul>
           <li>
-            <a href="#">intro</a>
+            <a href="#intro">intro</a>
           </li>
           <li>
-            <a href="#">top 3</a>
+            <a href="#top3-jobs">top 3</a>
           </li>
           <li>
             <a href="#">gallery</a>
@@ -51,7 +52,7 @@
 
   </div>
 
-  <section class="intro main-bg section">
+  <section id="intro" class="intro main-bg section">
     <div class="main-content intro-content">
       <div class="intro-text-content">
         <h2>
@@ -64,12 +65,32 @@
         </p>
       </div>
       <div class="intro-img">
-        <img src="assets/img/image-language-javascript.svg" alt="Um homem segurando a logo do CSS, uma mulher empurrando a logo do javascript e um outro homem segurando a logo do html">
+        <img src="assets/img/image-language-javascript.svg"
+          alt="Um homem segurando a logo do CSS, uma mulher empurrando a logo do javascript e um outro homem segurando a logo do html">
       </div>
     </div>
   </section>
 
-  <section class="white-bg section">
+  <section id="top3-jobs" class="white-bg section">
+    <div class="main-content top3-content">
+      <h2>
+        Top 3 Jobs
+      </h2>
+      <p>
+        The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some
+        surprises at the machine’s performance. This post details some background information on the experience of
+        porting Firefox to run natively on these CPUs.
+      </p>
+      <p>
+        We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to
+        know about the new architecture, before moving on to the concept of Universal Binaries.
+      </p>
+      <p>
+        We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and
+        discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various
+        other improvements that are in the pipeline.
+      </p>
+    </div>
   </section>
 </body>
 
