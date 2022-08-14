@@ -249,4 +249,9 @@
   .menu-spacing {
     display: none;
   }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
 }
