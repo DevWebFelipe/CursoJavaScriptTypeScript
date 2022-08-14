@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Abaixo segue link com tabela completa de EMMET ABBREVIATION -->
+  <!-- https://docs.emmet.io/cheatsheet-a5.pdf -->
+  
+  <!-- Criar caminho para pasta de configuração de CSS -->
+  <!-- link:css -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+    /* Colocar display flex com DF */
+    display: flex;
+
+    /* Colocar display grid com DG*/
+    display: grid;
+
+    /* Colocar display none com DN */
+    display: none;
+
+    /* Colocar display block com DB */
+    display: block;
+
+    /* Colocar um background com BG */
+    background: #000;
+
+    /* Colocar um background color com BGC */
+    background-color: #000;
+
+    /* Colocar um background image com BGI */
+    background-image: url(colocarurlaqui);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Criar uma div com duas classes -->
+  <!-- div.clase-um.classe-dois -->
+  <div class="classe-um classe-dois"></div>
+
+  <!-- Criar uma div com ID -->
+  <!-- div#id-um -->
+  <div id="id-um"></div>
+
+  <!-- Criar uma div com ID e classe -->
+  <!-- div#id-um.classe-um -->
+  <div id="id-um" class="classe-um"></div>
+
+  <!-- Criar uma div com ID, classes e conteúdo -->
+  <!-- div#id-um.classe-um.outra-classe{conteúdo da div} -->
+  <div id="id-um" class="classe-um outra-classe">conteúdo da div</div>
+
+  <!-- Criar mais de uma div -->
+  <!-- div#id-um.classe-um*3 -->
+  <div id="id-um" class="classe-um"></div>
+  <div id="id-um" class="classe-um"></div>
+  <div id="id-um" class="classe-um"></div>
+
+  <!-- Criar mais de uma div já com conteúdo -->
+  <!-- div#id-um.classe-um.outra-classe{Já com conteúdo}*3 -->
+  <div id="id-um" class="classe-um outra-classe">Já com conteúdo</div>
+  <div id="id-um" class="classe-um outra-classe">Já com conteúdo</div>
+  <div id="id-um" class="classe-um outra-classe">Já com conteúdo</div>
+
+  <!-- Criar mais de uma div já com conteúdo porém incrementando o id e o conteúdo -->
+  <!-- div#id-$.minha-classe.minha-outra-classe{Contador incrementado $}*3 -->
+  <div id="id-1" class="minha-classe minha-outra-classe">Contador incrementado 1</div>
+  <div id="id-2" class="minha-classe minha-outra-classe">Contador incrementado 2</div>
+  <div id="id-3" class="minha-classe minha-outra-classe">Contador incrementado 3</div>
+
+  <!-- Criar um elemento e um filho para esse elemento -->
+  <!-- ul>li{Conteúdo $} -->
+  <ul>
+    <li>Conteúdo 1</li>
+    <li>Conteúdo 2</li>
+    <li>Conteúdo 3</li>
+  </ul>
+
+  <!-- Criar um elemento e um filho que possua outro elemento mais de uma vez, criando um grupo de elementos com () -->
+  <!-- ul>(li>a{Conteúdo do A dentro do LI $})*3 -->
+  <ul>
+    <li><a href="">Conteúdo do A dentro do LI 1</a></li>
+    <li><a href="">Conteúdo do A dentro do LI 2</a></li>
+    <li><a href="">Conteúdo do A dentro do LI 3</a></li>
+  </ul>
+
+  <!-- Criar um elemento e um filho que possua um atributo, já alimentando o conteúdo desse atributo -->
+  <!-- ul>(li>a{Conteúdo do A dentro do LI $}[href="http://link.com/conteudo-$"])*3 -->
+  <ul>
+    <li><a href="http://link.com/conteudo-1">Conteúdo do A dentro do LI 1</a></li>
+    <li><a href="http://link.com/conteudo-2">Conteúdo do A dentro do LI 2</a></li>
+    <li><a href="http://link.com/conteudo-3">Conteúdo do A dentro do LI 3</a></li>
+  </ul>
+
+  <!-- Criar uma div com classe, id um H1 dentro com conteudo usando o + para criar um outro elemento filho da div, que seria um irmão do H1, nesse exemplo esse elemento irmão vai ser um P e dentro desse P um elemento A com conteúdo e atributo preenchidos, depois usar o + novamente para continuar o conteúdo do P, no final, ainda multiplicar o P para que seja criado mais de um parágrafo -->
+  <!-- div.mimha-classe#home>h1{Meu título}+(p{Para acessar o link $ }>a{clique aqui}[href="http://link.com/conteudo-$" target="_blank"]+{ e siga para a página $.})*3 -->
+  <div class="mimha-classe" id="home">
+    <h1>Meu título</h1>
+    <p>Para acessar o link 1 <a href="http://link.com/conteudo-1" target="_blank">clique aqui</a> e siga para a página 1.</p>
+    <p>Para acessar o link 2 <a href="http://link.com/conteudo-2" target="_blank">clique aqui</a> e siga para a página 2.</p>
+    <p>Para acessar o link 3 <a href="http://link.com/conteudo-3" target="_blank">clique aqui</a> e siga para a página 3.</p>
+  </div>
+
+  <!-- Criar uma section que tenha como filho um H1 e uma DIV, essa DIV tenha como filho um P que por sua vez tem como filho um SPAN e multiplicar esse P 3 vezes, criar tudo sem conteúdo, para a instrução não ficar gigante, agora é só preencher o H1 e usar o TAB, altomaticamente, o cursos vai cair dentro do próximo elemento para preencher o conteúdo -->
+  <!-- section>h1+div>(p>span)*3 -->
+  <section>
+    <h1>Título</h1>
+    <div>
+      <p><span>Conteúdo sequente com TAB</span></p>
+      <p><span>Conteúdo subsequente com TAB</span></p>
+      <p><span>Conteúdo final com TAB</span></p>
+    </div>
+  </section>
+
+</body>
+</html>
