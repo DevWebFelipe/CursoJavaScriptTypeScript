@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -64,6 +65,7 @@ table {
 .responsive-table {
   overflow: hidden;
   overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 table caption {
