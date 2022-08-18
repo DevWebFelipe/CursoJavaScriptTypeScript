@@ -13,6 +13,7 @@ console.log(umaString.match(/[a-z]/));
 //vai retornar o índice onde encontrou a primeira letra que se enquadrou na consulta que passe para fazer
 console.log(umaString.search(/[a-z]/)); 
 console.log(umaString.search(/x/)); 
+console.log(umaString.search('x')); 
 
 //substituir uma palavra da sentença por outra
 console.log(umaString.replace('Um', 'Outro')); 

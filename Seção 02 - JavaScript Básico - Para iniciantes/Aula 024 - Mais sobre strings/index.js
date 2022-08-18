@@ -23,6 +23,6 @@ console.log(`${umaString3} em um lindo dia`); //exemplo com teplate string
 console.log(umaString3.indexOf('qualquer')); //Retorna o indíce em que encontra a sentença solicitada
 console.log(umaString3.indexOf('qualquer', 8)); //Retorna o indíce em que encontra a sentença solicitada a partir do indice indicado
 
-//Caso não encontre a senteça solicitada, retornará 0, irá começar do indice final, ou seja, a ultima letra
+//Caso não encontre a senteça solicitada, retornará -1, irá começar do indice final, ou seja, a ultima letra
 console.log(umaString3.lastIndexOf('qualquer')); //Retorna o indíce em que encontra a sentença solicitada
 console.log(umaString3.lastIndexOf('qualquer', 3)); //Retorna o indíce em que encontra a sentença solicitada a partir do indice indicado

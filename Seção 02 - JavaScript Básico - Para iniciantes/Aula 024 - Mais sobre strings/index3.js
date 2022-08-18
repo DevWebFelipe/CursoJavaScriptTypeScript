@@ -4,7 +4,7 @@ let outraString = 'O rato roeu a roupa do rei de roma.';
 console.log(outraString.length);
 
 //Pegar um intervalo de uma string, basta passar o indice incial e final que quero
-console.log(outraString.slice(30, 35));
+console.log(outraString.slice(30, 30));
 //Passando negatigo, pego do último para traz, a quantidade que eu passar
 console.log(outraString.slice(-5));
 //Passando só um numero positivo, pego da sua posição para frente, a quantidade que restar
