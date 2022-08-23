@@ -10,6 +10,8 @@
 !==    Diferente estrito                               - Checa se o valor é diferente e se o tipo é diferente
 */
 
+//Evitar usar o ==, tentar usar sempre o === pois vai comparar o valor e o tipo do valor
+
 //Posso tanto verificar direto, quanto atribuir a verificação a uma variável ou constante
 
 const maiorQue = 10 > 5;
