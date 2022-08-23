@@ -10,28 +10,32 @@
 !==    Diferente estrito                               - Checa se o valor é diferente e se o tipo é diferente
 */
 
-/*    > Maior que    */
-console.log('10 maior que 5?', 10 > 5);
+//Posso tanto verificar direto, quanto atribuir a verificação a uma variável ou constante
 
-/*    => Maior ou igual    */
-console.log('10 maior ou igual a 5?', 10 >= 5);
+const maiorQue = 10 > 5;
+console.log('">"   10 maior que 5?', maiorQue);
 
-/*    < Menor que    */
-console.log('10 menor que 5?', 10 < 5);
+const maiorIgual = 10 >= 5;
+console.log('">="  10 maior ou igual a 5?', maiorIgual);
 
-/*    <= Menor ou igual    */
-console.log('10 menor ou igual a 5?', 10 <= 5);
+const menorQue = 10 < 5;
+console.log('"<"   10 menor que 5?', menorQue);
 
-/*    == igual    */
-console.log('10 igual a 5?', 10 == 5);
-console.log('10 tipo string igual a 10 tipo integer?', '10' == 10);
+let menorIgual = 10 <= 5;
+console.log('"<="  10 menor ou igual a 5?', menorIgual);
 
-/*    === Igual e mesmo tipo    */
-console.log('10 tipo string igual a 10 tipo integer?', '10' === 10);
+let resultadoComparacao = 10 == 5;
+console.log('"=="  10 igual a 5?', resultadoComparacao);
+resultadoComparacao = '10' == 10;
+console.log('"=="  10 tipo string igual a 10 tipo integer?', resultadoComparacao);
 
-/*    != Diferente    */
-console.log('10 tipo string diferente de 10 tipo integer?', '10' != 10);
+resultadoComparacao = '10' === 10;
+console.log('"===" 10 tipo string igual a 10 tipo integer?', resultadoComparacao);
 
-/*    !== Diferente e tipos diferentes    */
-console.log('10 tipo string diferente de 10 tipo integer?', '10' !== 10);
-console.log('10 tipo string diferente de 10 tipo integer?', '10' !== 5);
+const num1 = 10;
+const num2 = 5;
+const texto10 = '10';
+console.log('"!="  10 tipo string diferente de 10 tipo integer?', texto10 != num1);
+
+console.log('"!==" 10 tipo string diferente de 10 tipo integer?', texto10 !== num1);
+console.log('"!==" 10 tipo string diferente de 10 tipo integer?', texto10 !== num2);
