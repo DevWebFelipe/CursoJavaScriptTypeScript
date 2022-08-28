@@ -76,3 +76,13 @@ form button:active {
   background-color: aquamarine;
   padding: 10px 20px;
 }
+
+.paragrafo-erro {
+  background-color: rgb(172, 34, 34);
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.bordas-arredondadas {
+  border-radius: 15px;
+}
