@@ -55,7 +55,7 @@ function Calculadora() {
   };
 
   this.calculaComEnter = () => {
-    this.display.addEventListener('keypress', e => {
+    document.addEventListener('keyup', e => {
       if (e.keyCode !== 13) return;
 
       this.calcular();
