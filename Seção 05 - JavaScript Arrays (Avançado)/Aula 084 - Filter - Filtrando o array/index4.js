@@ -7,7 +7,6 @@ const numerosFiltrados2 = numeros.filter(function (valor) {
   return valor <= 10;
 });
 
-
 */
 // 1º - remover o function e usar Arrow function =>
 // 2º - só estou usando um parâmetro, então posso remover os parênteses do parâmetro
