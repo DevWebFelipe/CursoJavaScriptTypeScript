@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,KAAK,CAAC,OAAO,CAAC;;AAEd;AACA;;AAEAC,OAAO,CAACC,GAAG,CAAC,OAAO,CAAC,C","sources":["webpack://modelo-webpack/./src/index.js"],"sourcesContent":["alert('teste');\r\n\r\n//linha1\r\n//linha2\r\n\r\nconsole.log('teste');"],"names":["alert","console","log"],"sourceRoot":""}
