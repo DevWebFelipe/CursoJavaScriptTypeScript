@@ -1,0 +1,11 @@
+	MongoDB
+	Login: development.felipe@gmail.com
+	Senha: 
+	usuário banco de dados
+	Login: felipedevweb
+	Senha: 
+	LinkAcessoMongo
+	mongodb+srv://felipedevweb:<password>@javascriptcourse.etes208.mongodb.net/?retryWrites=true&w=majority
+	Trocar <password> por SENHA
+
+  https://cloud.mongodb.com
