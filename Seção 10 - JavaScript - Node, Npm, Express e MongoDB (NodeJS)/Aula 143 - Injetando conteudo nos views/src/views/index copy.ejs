@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Modelo padrão aulas</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>
+      <!-- <% %> sem sinais, quer dizer que pode ser escrito JS ali dentro, um IF, um FOR
+      o que precisar -->
+      <!-- <%= %> tags usadas para pegar o que vem do controler -->
+      <!-- <%- %> - vai pegar as configs de HTML = não pega as configs e endente como string, O =
+      é mais seguro de ser utilizado, porque ele não vai ler as tags como código e sim como string,
+      o - vai ser usado quando o conteúdo que estiver vindo ali realmente precisar ser HTML -->
+
+      <%= titulo %><br><br>
+      <%- titulo %><br><br>
+
+      <% if(typeof titulo2 !== 'undefined') { %> <!-- se a variável titulo2 for diferente de indefinida
+      ou seja, se foi atribuido algum valor para ela -->
+        <%= titulo2 %> <!-- se o titulo2 tem algum valor, então vai exbir esse valor -->
+      <% } else { %>
+        Título 2 não definido
+      <% } %> <br><br>
+
+
+      <% numeros.forEach(element => { %>
+        <%= element %> <br>
+      <% }); %> <br><br>
+
+      <% for(let mI = 0; mI < numeros.length; mI++) { %> <!-- se for usar assim, tem que ser LET, CONST vai dar erro -->
+        <%= numeros[mI] %><br>
+      <% }; %>  
+    </h1>
+
+    <form action="/" method="post">
+      <label>Cliente</label>
+      <input type="text" name="cliente">
+      <button>Enviar</button>
+    </form>
+  </section>
+
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>
