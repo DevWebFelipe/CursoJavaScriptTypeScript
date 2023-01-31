@@ -1,12 +1,8 @@
-module.exports = (req, res, next) => {
-  next();
-};
-
 exports.middlewareGlobal = (req, res, next) => {
+  res.locals.respostaRota = 'Resposta enviada com sucesso';
   next();
 };
 
-exports.middlewareQualquer = (req, res, next) => {
-  console.log('middlewareQualquer');
+exports.outroMiddleware = (req, res, next) => {
   next();
 };
