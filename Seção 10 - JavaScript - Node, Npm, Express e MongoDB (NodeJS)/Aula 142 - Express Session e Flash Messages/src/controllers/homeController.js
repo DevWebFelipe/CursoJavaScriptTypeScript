@@ -1,4 +1,5 @@
 exports.paginaIncial = (req, res) => {
+
   /*
   req.session.usuario = {nome: 'Felipe', logado: true};
   req.flash('info', 'Seja bem vindo');
