@@ -31,7 +31,7 @@ const sessionOptions = session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7, //tempo em milésimos de sgundos que a sessão vai durar
+    maxAge: 1000 * 60 * 60 * 24 * 7,
     httpOnly: true
   }
 });

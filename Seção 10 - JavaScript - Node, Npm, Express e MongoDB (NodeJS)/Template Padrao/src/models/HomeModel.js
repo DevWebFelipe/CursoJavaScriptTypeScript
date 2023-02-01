@@ -12,4 +12,4 @@ class Home {
 
 };
 
-module.exports = HomeModel; //depois mudar por Home
+module.exports = HomeModel; 
