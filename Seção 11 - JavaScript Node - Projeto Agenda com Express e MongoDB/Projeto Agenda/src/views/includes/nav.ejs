@@ -6,18 +6,27 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      
+
+      <li class="nav-item">
+        <a class="nav-link" href="/contato/index">Contatos</a>
+      </li>      
+
       <% if(user) { %>
+        <!--
         <li class="nav-item">
           <a class="nav-link" href="/contato/index">Contatos</a>
-        </li>        
+        </li>        -->
+
         <li class="nav-item">
           <a class="nav-link" href="/login/logout">Sair</a>
         </li>
+
       <% } else { %>
+
         <li class="nav-item">
           <a class="nav-link" href="/login/index">Entrar</a>
         </li>
+
       <% } %>
 
     </ul>
