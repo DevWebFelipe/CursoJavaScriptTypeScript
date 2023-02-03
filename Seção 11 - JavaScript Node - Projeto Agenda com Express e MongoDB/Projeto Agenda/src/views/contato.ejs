@@ -7,11 +7,21 @@
 
     <div class="col-lg-8 my-3">
       <h1 class="text-center my-3">Contatos</h1>
-      <p class="text-center lead">Adicionar contatos</p>
+
+      <% if(contato._id) { %>
+        <p class="text-center lead">Alterar contatos</p>    
+      <% } else { %>    
+        <p class="text-center lead">Adicionar contatos</p>
+      <% } %>      
 
       <%- include('includes/messages') %>
 
-      <form action="/contato/register" method="POST">
+      <% if(contato._id) { %>
+        <form action="/contato/edit/<%= contato._id %>" method="POST">       
+      <% } else { %>    
+        <form action="/contato/register" method="POST">
+      <% } %> 
+
         <input type="hidden" name="_csrf" value=<%= csrfToken %>>
 
         <div class="form-group">
