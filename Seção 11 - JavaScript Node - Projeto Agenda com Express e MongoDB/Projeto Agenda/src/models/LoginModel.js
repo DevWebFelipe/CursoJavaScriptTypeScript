@@ -3,6 +3,7 @@ const validator = require('validator');
 const bcryptjs = require('bcryptjs');
 
 const LoginSchema = new mongoose.Schema({
+  name: {type: String, required: true},
   email: {type: String, required: true},
   password: {type: String, required: true}
 })
@@ -17,7 +18,7 @@ class Login {
   }
 
   async login(){
-    this.valida();
+    this.validaLogin();
     if(this.errors.length > 0) return;
     
     this.user = await LoginModel.findOne({email: this.body.email});
@@ -35,7 +36,7 @@ class Login {
   }
 
   async register() {
-    this.valida();
+    this.validaRegister();
     if(this.errors.length > 0) return;
 
     await this.userExists();
@@ -54,7 +55,19 @@ class Login {
     if(this.user) this.errors.push('Usuário já existe!');
   }
 
-  valida() {
+  validaRegister() {
+    this.cleanUp();
+
+    if(!this.body.name) this.errors.push('Nome não pode ficar em branco!');
+
+    if(!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido!');
+    
+    if(this.body.password.length < 3 || this.body.password.length > 50) {
+      this.errors.push('A senha precisa ter entre 3 e 50 caracteres!');
+    }  
+  }
+
+  validaLogin() {
     this.cleanUp();
 
     if(!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido!');
@@ -72,8 +85,9 @@ class Login {
     }
 
     this.body = {
+      name: this.body.name,
       email: this.body.email,
-      password: this.body.password
+      password: this.body.password      
     }
   }
 };
