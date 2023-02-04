@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const HomeSchema = new mongoose.Schema({
-  titulo: {type: String, required: true},
+  titulo: { type: String, required: true },
   id: String,
   descricao: String,
 })

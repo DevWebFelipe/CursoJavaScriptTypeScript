@@ -1,25 +1,63 @@
 <%- include('includes/head') %>
-<%- include('includes/nav') %>
+  <%- include('includes/nav') %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-2"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
 
-    <div class="col-lg-8 my-3">
-      <h1 class="text-center my-3">Agenda</h1>
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center my-3">Agenda</h1>
 
-      <% if(user) { %>
-        <p class="text-center lead">Olá, que bom vêlo por aqui, clique no menu contatos e comece a gerenciar sua agenda</p>
-      <% } else { %>  
-        <p class="text-center lead">Faça login para visualizar e gerenciar seus contatos</p>
-      <% } %>
+          <% if(user) { %>
+            <p class="text-center lead">Olá, que bom vêlo por aqui, clique no menu contatos e comece a gerenciar sua
+              agenda</p>
+            <% } else { %>
+              <p class="text-center lead">Faça login para visualizar e gerenciar seus contatos</p>
+              <% } %>
 
-      <%- include('includes/messages') %>
+                <%- include('includes/messages') %>
 
+                  <% if(user) { %>
+                    <% if(contatos.length> 0) { %>
+                      <div class="responsive-table">
+                        <table class="table my-5">
+                          <tr>
+                            <td>Nome</td>
+                            <td>Sobrenome</td>
+                            <td>Telefone</td>
+                            <td>E-mail</td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <% contatos.forEach(contato=> { %>
+                            <tr>
+                              <td>
+                                <%= contato.nome %>
+                              </td>
+                              <td>
+                                <%= contato.sobrenome %>
+                              </td>
+                              <td>
+                                <%= contato.telefone %>
+                              </td>
+                              <td>
+                                <%= contato.email %>
+                              </td>
+                              <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+                              <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+                            </tr>
+                            <% }); %>
+                        </table>
+                      </div>
+                      <% } else { %>
+                        <p class="text-center lead">Não há contatos na sua agenda</p>
+                        <% } %>
+                          <% } %>
+
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
     </div>
 
-    <div class="col-lg-2"></div>
-  </div>
-</div>
-
-<%- include('includes/footer') %>
+    <%- include('includes/footer') %>

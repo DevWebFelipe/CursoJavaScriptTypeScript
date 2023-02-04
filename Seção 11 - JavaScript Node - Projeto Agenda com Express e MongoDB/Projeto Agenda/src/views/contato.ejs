@@ -1,56 +1,56 @@
 <%- include('includes/head') %>
-<%- include('includes/nav') %>
+  <%- include('includes/nav') %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-2"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
 
-    <div class="col-lg-8 my-3">
-      <h1 class="text-center my-3">Contatos</h1>
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center my-3">Contatos</h1>
 
-      <% if(contato._id) { %>
-        <p class="text-center lead">Alterar contatos</p>    
-      <% } else { %>    
-        <p class="text-center lead">Adicionar contatos</p>
-      <% } %>      
+          <% if(contato._id) { %>
+            <p class="text-center lead">Alterar contatos</p>
+            <% } else { %>
+              <p class="text-center lead">Adicionar contatos</p>
+              <% } %>
 
-      <%- include('includes/messages') %>
+                <%- include('includes/messages') %>
 
-      <% if(contato._id) { %>
-        <form action="/contato/edit/<%= contato._id %>" method="POST">       
-      <% } else { %>    
-        <form action="/contato/register" method="POST">
-      <% } %> 
+                  <% if(contato._id) { %>
+                    <form action="/contato/edit/<%= contato._id %>" method="POST">
+                      <% } else { %>
+                        <form action="/contato/register" method="POST">
+                          <% } %>
 
-        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                            <input type="hidden" name="_csrf" value=<%=csrfToken %>>
 
-        <div class="form-group">
-          <label>Nome</label>
-          <input value="<%= contato.nome %>" type="text" name="nome" class="form-control">
+                            <div class="form-group">
+                              <label>Nome</label>
+                              <input value="<%= contato.nome %>" type="text" name="nome" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                              <label>Sobrenome</label>
+                              <input value="<%= contato.sobrenome %>" type="text" name="sobrenome" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                              <label>Telefone</label>
+                              <input value="<%= contato.telefone %>" type="tel" name="telefone" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                              <label>E-mail</label>
+                              <input value="<%= contato.email %>" type="email" name="email" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </form>
+
         </div>
 
-        <div class="form-group">
-          <label>Sobrenome</label>
-          <input value="<%= contato.sobrenome %>" type="text" name="sobrenome" class="form-control">
-        </div>
-
-        <div class="form-group">
-          <label>Telefone</label>
-          <input value="<%= contato.telefone %>" type="tel" name="telefone" class="form-control">
-        </div>
-
-        <div class="form-group">
-          <label>E-mail</label>
-          <input value="<%= contato.email %>" type="email" name="email" class="form-control">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </form>
-
+        <div class="col-lg-2"></div>
+      </div>
     </div>
 
-    <div class="col-lg-2"></div>
-  </div>
-</div>
-
-<%- include('includes/footer') %>
+    <%- include('includes/footer') %>
