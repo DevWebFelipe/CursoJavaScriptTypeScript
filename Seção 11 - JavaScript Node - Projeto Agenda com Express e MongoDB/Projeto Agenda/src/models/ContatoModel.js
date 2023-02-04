@@ -66,7 +66,7 @@ Contato.getPorId = async function (id) {
 }
 
 Contato.getLista = async function () {
-  const contatos = await ContatoModel.find({  })
+  const contatos = await ContatoModel.find()
     .sort({ dataCadastro: -1 });
   return contatos;
 }
