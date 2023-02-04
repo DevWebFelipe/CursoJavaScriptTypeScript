@@ -12,27 +12,43 @@ export default class Login {
   events() {
     if(!this.form) return;
     this.form.addEventListener('submit', e => {
+      const el = e.target;
       e.preventDefault();
-      this.validate(e);
+      
+      const isValid = this.validate(e);
+      if(isValid) el.submit();
     })
   }
 
-  validate(e) {
-    const el = e.target;
-    const emailInput = el.querySelector('input[name="email"]');
-    const passwordInput = el.querySelector('input[name="password"]');
-    let error = false;
-
-    if(!validator.isEmail(emailInput.value)) {
-      alert('Email inválido!');
-      error = true;
+  validate(e) { 
+    for(let errorText of this.form.querySelectorAll('.error')) {
+      errorText.remove();
     }
 
-    if(passwordInput.value.length < 3 || passwordInput.value.length > 50) {
-      alert('A senha precisa ter entre 3 e 50 caracteres!');
-      error = true;
+    let valid = true;  
+
+    for(let field of this.form.querySelectorAll('.validate')) {
+      const label = field.previousElementSibling.innerText;
+
+      if(!field.value) {
+        if(field.name === 'email' && !validator.isEmail(field.value)) {
+          this.createError(field, `O e-mail informado não é um e-mail válido`);
+          valid = false;
+        } else {
+          this.createError(field, `O campo "${label}" não pode ficar vazio`);
+          valid = false;
+        }
+      }
     }
 
-    if(!error) el.submit();
+    return valid;
+  }
+
+  createError(field, message) {
+    const small = document.createElement('small');    
+    small.innerHTML = message;
+    small.classList.add('text-danger');
+    small.classList.add('error');
+    field.insertAdjacentElement('afterend', small);    
   }
 }
