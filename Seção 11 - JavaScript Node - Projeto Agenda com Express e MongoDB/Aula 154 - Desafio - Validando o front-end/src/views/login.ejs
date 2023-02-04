@@ -1,0 +1,75 @@
+<%- include('includes/head') %>
+  <%- include('includes/nav') %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center my-3">Crie ou acesse sua conta</h1>
+          <p class="text-center lead">Use seu email e senha para criar ou acessar sua conta</p>
+
+          <%- include('includes/messages'); %>
+
+            <div class="row">
+
+              <div class="col-lg my-5">
+                <h4>Crie uma nova conta</h4>
+
+                <form class="form-cadastro" action="/login/register" method="POST">
+                  <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nome completo</label>
+                    <input type="text" class="form-control" name="name" placeholder="Nome completo">
+                    <small class="form-text text-muted">Seus dados não serão compartilharemos.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Endereço de e-mail</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                      placeholder="Digite seu email">
+                    <small id="emailHelp" class="form-text text-muted">Você não receberá e-mails deste site.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Criar sua conta</button>
+                </form>
+
+              </div>
+
+              <div class="col-lg my-5">
+                <h4>Entre com seu usuário e senha</h4>
+
+                <form class="form-login" action="/login/login" method="POST">
+                  <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Endereço de e-mail</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                      placeholder="Digite seu email">
+                    <small id="emailHelp" class="form-text text-muted">Você não receberá e-mails deste site.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Acessar a conta</button>
+                </form>
+
+              </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <%- include('includes/footer') %>
