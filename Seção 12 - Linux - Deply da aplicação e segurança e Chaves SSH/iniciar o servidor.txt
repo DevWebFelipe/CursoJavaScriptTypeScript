@@ -29,3 +29,5 @@ nesse momento todos os pacotes do servidor serão atualizados
 caso precise remover algo, rodar o SUDO APT AUTOREMOVE
 
 concluído tudo, dar um reboot no server com o comando SUDO REBOOT
+
+pm2 start /home/Felipe/agenda/server.js --name Agenda
