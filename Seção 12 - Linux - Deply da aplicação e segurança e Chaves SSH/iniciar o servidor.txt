@@ -1,0 +1,31 @@
+Link de acesso ao servidor no google cloud
+
+https://console.cloud.google.com/compute/instances?hl=pt-br&project=projeto-agenda-cursojs
+
+sempre que reiniciar o computador, tem que chamar os seguintes métodos no git bash
+
+eval $(ssh-agent)
+ssh-add ~.ssh/id_rsa
+ssh 35.199.108.28
+
+para visualizar a pasta com as chaves SSH digitar o seguinte comando no git bash
+
+start ~/.ssh
+
+a chave que vai para o servidor é o que estiver no arquivo id_rsa.pub
+é necessário abrir o arquivo e copiar a chave, copiar inteira sem remover nada
+
+depois, no site do google cloud, tem que ir em COMPUTE ENGINE -> METADADOS -> CHAVES SSH -> ADICIONAR CHAVE SSH
+
+depois, para acessar o servidor tem que ir em COMPUTE ENGINE -> INSTANCIAS DE VM
+copiar o IP do servidor
+
+depois voltar no git bash e colar o IP logo depois do comando ssh, nesse momento, estamos conectados 
+ao servidor
+
+depois de conectar executar o comando SUDO APT UPDATE terminando de rodar esse, rodar o SUDO APT UPGRADE
+nesse momento todos os pacotes do servidor serão atualizados
+
+caso precise remover algo, rodar o SUDO APT AUTOREMOVE
+
+concluído tudo, dar um reboot no server com o comando SUDO REBOOT
