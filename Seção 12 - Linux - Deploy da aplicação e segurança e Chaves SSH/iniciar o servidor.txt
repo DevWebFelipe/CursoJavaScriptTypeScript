@@ -6,7 +6,7 @@ sempre que reiniciar o computador, tem que chamar os seguintes métodos no git b
 
 eval $(ssh-agent)
 ssh-add ~.ssh/id_rsa
-ssh 35.199.108.28
+ssh 35.199.126.63
 
 para visualizar a pasta com as chaves SSH digitar o seguinte comando no git bash
 
