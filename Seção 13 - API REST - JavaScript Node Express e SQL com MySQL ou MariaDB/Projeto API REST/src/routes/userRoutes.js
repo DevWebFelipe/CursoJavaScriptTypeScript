@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import homeController from '../controllers/HomeController';
+import userController from '../controllers/UserController';
 
 const router = new Router();
 
-router.get('/', homeController.index);
+router.post('/', userController.store);
 
 export default router;
 
@@ -14,5 +14,8 @@ export default router;
  store/create POST -> Cria um novo registro
  delete DELETE -> Apaga um registro
  show GET -> Mostra um registro
- update PACTH ou PUT -> Altera um registro
+ update PATCH ou PUT -> Altera um registro
+
+ PATCH -> Normalmente usado para editar um campo apenas
+ PUT -> Normalmente usado para editar o registro inteiro
 */

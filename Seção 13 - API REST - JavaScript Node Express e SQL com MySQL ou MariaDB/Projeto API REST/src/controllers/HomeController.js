@@ -6,7 +6,7 @@ class HomeController {
       nome: 'Isis',
       sobrenome: 'Gabrielle Texeira',
       email: 'isis@gmail.com',
-      idade: 0,
+      idade: 4,
       peso: 7.0,
       altura: 0.48,
     });
