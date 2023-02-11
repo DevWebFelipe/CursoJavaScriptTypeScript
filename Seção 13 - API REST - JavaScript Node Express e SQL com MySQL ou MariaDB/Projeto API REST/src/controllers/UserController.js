@@ -48,7 +48,7 @@ class UserController {
 
       if (!user) {
         return res.status(400).json({
-          errors: ['Usuário não contrado!'],
+          errors: ['Usuário não encontrado!'],
         });
       }
 
