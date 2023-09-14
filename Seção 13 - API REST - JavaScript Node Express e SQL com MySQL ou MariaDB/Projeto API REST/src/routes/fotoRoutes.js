@@ -7,4 +7,3 @@ const router = new Router();
 router.post('/', fotoController.store);
 
 export default router;
-1
